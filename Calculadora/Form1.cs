@@ -46,5 +46,9 @@ namespace Calculadora
         {
 
         }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            textResultado.Text += "0";        }
     }
 }
