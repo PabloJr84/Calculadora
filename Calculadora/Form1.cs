@@ -30,16 +30,23 @@ namespace Calculadora
 
         private void button4_Click(object sender, EventArgs e)
         {
-            valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
 
-            textResultado.Text = "";
-            operacao = "SOMA";
-            lblOperacao.Text = "+";
+            if(textResultado.Text != "")
+            {
+                valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture); 
+                textResultado.Text = "";
+                operacao = "SOMA";
+                lblOperacao.Text = "+";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            textResultado.Text = "";
+            textResultado.Text += "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -95,6 +102,7 @@ namespace Calculadora
         private void button11_Click(object sender, EventArgs e)
         {
             valor2 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+
             if (operacao == "SOMA")
             {
                 textResultado.Text = Convert.ToString ( valor1 + valor2);
@@ -117,32 +125,70 @@ namespace Calculadora
 
         private void button7_Click(object sender, EventArgs e)
         {
+            if (textResultado != null)
+            {
+                valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
 
-            valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
-
-            textResultado.Text = "";
-            operacao = "SUB";
-            lblOperacao.Text = "-";
+                textResultado.Text = "";
+                operacao = "SUB";
+                lblOperacao.Text = "-";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor");
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            if(textResultado != null)
+            {
+                valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
 
-            valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
-
-            textResultado.Text = "";
-            operacao = "MULT";
-            lblOperacao.Text = "X";
+                textResultado.Text = "";
+                operacao = "MULT";
+                lblOperacao.Text = "X";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor");
+            }
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
+            if (textResultado != null)
+            {
+                valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
 
-            valor1 = decimal.Parse(textResultado.Text, CultureInfo.InvariantCulture);
+                textResultado.Text = "";
+                operacao = "DIV";
+                lblOperacao.Text = "/";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor");
+            }
+        }
 
-            textResultado.Text = "";
-            operacao = "DIV";
-            lblOperacao.Text = "/";
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textResultado != null)
+            {
+                textResultado.Text = "";
+                valor1 = 0;
+                valor2 = 0;
+                lblOperacao.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Informe um valor");
+            }
+        }
+
+        private void textResultado_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button18_Click(object sender, EventArgs e)

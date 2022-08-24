@@ -70,6 +70,7 @@
             this.textResultado.Size = new System.Drawing.Size(364, 60);
             this.textResultado.TabIndex = 3;
             this.textResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textResultado.TextChanged += new System.EventHandler(this.textResultado_TextChanged);
             // 
             // lblOperacao
             // 
@@ -129,6 +130,7 @@
             this.button6.TabIndex = 13;
             this.button6.Text = "C";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
